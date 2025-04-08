@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "name": "Alex Murphy",
-  "email": "",
+  "email": "alexM@gmail.com",
   "address": "123 Mountain view USA",
   "dateOfBirth": "2005-04-07",
   "registerDate": "2025-04-07"
