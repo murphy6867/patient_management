@@ -43,7 +43,7 @@ public class PatientController {
     }
 
     @PutMapping("/{id}")
-    @Operation(summary = "Update a new Patient")
+    @Operation(summary = "Update an existing Patient")
     public ResponseEntity<PatientResponseDTO> updatePatient(
             @PathVariable UUID id, @Validated({Default.class})
             @RequestBody PatientRequestDTO patientRequestDTO) {
@@ -54,7 +54,7 @@ public class PatientController {
     }
 
     @DeleteMapping("/{id}")
-    @Operation(summary = "Delete a new Patient")
+    @Operation(summary = "Delete Patient")
     public ResponseEntity<Void> deletePatient(@PathVariable UUID id) {
 
         patientService.deletePatient(id);
