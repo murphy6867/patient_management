@@ -3,11 +3,11 @@ POST http://localhost:4000/patients
 Content-Type: application/json
 
 {
-  "name": "Alex Murphy",
-  "email": "alexM@gmail.com",
-  "address": "123 Mountain view USA",
-  "dateOfBirth": "2005-04-07",
-  "registerDate": "2025-04-07"
+  "name": "Dene Henderson",
+  "email": "dene@example.com",
+  "address": "222 BKK, Thailand",
+  "dateOfBirth": "1995-04-07",
+  "registerDate": "2019-04-07"
 }
 
 ###
