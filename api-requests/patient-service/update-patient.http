@@ -5,7 +5,6 @@ Content-Type: application/json
 {
   "name": "Sir.Jim Henry United",
   "email": "sirJim2@gmail.com",
-  "address": "111 Manchester, England.",
-  "dateOfBirth": "1950-04-07"
+  "address": "111/15 Manchester, England."
 }
 ###

@@ -50,10 +50,21 @@ public class PatientService {
                     + patientRequestDTO.getEmail() + " already exists");
         }
 
+        if (patientRequestDTO.getDateOfBirth() != null && !patientRequestDTO.getDateOfBirth().isBlank()) {
+            LocalDate dateOfBirth = LocalDate.parse(patientRequestDTO.getDateOfBirth());
+
+            if (patientRepository.existsByDateOfBirth(dateOfBirth)) {
+                throw new IllegalArgumentException("A patient with this date of birth already exists");
+            }
+
+            patient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth()));
+        }
+
+
+
         patient.setName(patientRequestDTO.getName());
         patient.setAddress(patientRequestDTO.getAddress());
         patient.setEmail(patientRequestDTO.getEmail());
-        patient.setDateOfBirth(LocalDate.parse(patientRequestDTO.getDateOfBirth()));
 
         Patient updatedPatient = patientRepository.save(patient);
 
